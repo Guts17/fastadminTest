@@ -1,0 +1,1299 @@
+---------------------------------------------------------------
+[ 2019-08-09T08:21:00+08:00 ] 0.0.0.0 POST localhost:88/admin/index/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:1.132065s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.772044s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.436025s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1565310060,`token`='3628a272-a4d0-4e98-a6db-d0dabeea6415',`updatetime`=1565310060  WHERE  `id` = 1 [ RunTime:0.367021s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"062504990e8dfedb17599a4a0f1425a5\",\"username\":\"admin\",\"captcha\":\"ehqh\"}' , '/admin/index/login.html' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565310060) [ RunTime:0.032002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:21:03+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.158009s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.039002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.022001s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:21:05+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:21:48+08:00 ] 0.0.0.0 GET localhost:88/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.041002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.041002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:21:49+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&_=1565310109116
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:21:52+08:00 ] 0.0.0.0 GET localhost:88/admin/category/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:22:13+08:00 ] 0.0.0.0 GET localhost:88/admin/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:22:31+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&_=1565310109117
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:22:35+08:00 ] 0.0.0.0 GET localhost:88/admin/category/edit/ids/13?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:01+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&type=default&_=1565310109118
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:02+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&type=page&_=1565310109119
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:03+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&type=article&_=1565310109120
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:05+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&type=page&_=1565310109121
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:10+08:00 ] 0.0.0.0 GET localhost:88/admin/category/edit/ids/5?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.015001s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:23:43+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:24:06+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/recyclebin?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest/recyclebin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:24:07+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/recyclebin?dialog=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565310246755
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.055004s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'order clause'
+---------------------------------------------------------------
+[ 2019-08-09T08:24:11+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:38:52+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:38:52+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:38:53+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:38:53+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:39:00+08:00 ] 0.0.0.0 GET localhost:88/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:39:00+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&_=1565311140322
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:39:04+08:00 ] 0.0.0.0 GET localhost:88/admin/category/edit/ids/13?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:00+08:00 ] 0.0.0.0 GET localhost:88/admin/category?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:01+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:02+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:02+08:00 ] 0.0.0.0 GET localhost:88/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:02+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&_=1565311202286
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:08+08:00 ] 0.0.0.0 GET localhost:88/admin/test?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'test' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:08+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565311208344
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.010001s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:25+08:00 ] 0.0.0.0 GET localhost:88/admin/test/edit/ids/1?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  `id` = 1 ) AND `fa_test`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:25+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311225) [ RunTime:0.070004s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:40:26+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12,13) LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12,13) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12,13\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12,13\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311226) [ RunTime:0.120007s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:31+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22music%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208345
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('music', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('music', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:32+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208346
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:41+08:00 ] 0.0.0.0 GET localhost:88/admin/test/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:47+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%2C%22status%22%3A%22normal%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565311208347
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'normal' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'normal' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:48+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565311208348
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'hidden' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'hidden' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:49+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%2C%22status%22%3A%22normal%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565311208349
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'normal' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) )  AND `status` = 'normal' ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:41:50+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208350
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:42:29+08:00 ] 0.0.0.0 GET localhost:88/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:42:30+08:00 ] 0.0.0.0 GET localhost:88/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1565311349740
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:42:50+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208351
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:44:13+08:00 ] 0.0.0.0 GET localhost:88/admin/test/edit/ids/1?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  `id` = 1 ) AND `fa_test`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:44:14+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311454) [ RunTime:0.037002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:44:14+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12,13) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12,13) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12,13\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12,13\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311454) [ RunTime:0.034002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:44:20+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311460) [ RunTime:0.029002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:44:28+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311468) [ RunTime:0.031002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:49:18+08:00 ] 0.0.0.0 GET localhost:88/admin/test/recyclebin?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'test/recyclebin' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:49:19+08:00 ] 0.0.0.0 GET localhost:88/admin/test/recyclebin?dialog=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565311758873
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE `fa_test`.`deletetime` IS NOT NULL ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE `fa_test`.`deletetime` IS NOT NULL ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:49:38+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208352
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:49:38+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208353
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:08+08:00 ] 0.0.0.0 GET localhost:88/admin/test/edit/ids/1?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  `id` = 1 ) AND `fa_test`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:09+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311809) [ RunTime:0.038002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:09+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  `id` IN (12,13) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  `id` IN (12,13) ORDER BY `name` ASC LIMIT 0,20 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"searchTable\":\"tbl\",\"searchKey\":\"id\",\"searchValue\":\"12,13\",\"orderBy\":[[\"name\",\"ASC\"]],\"showField\":\"name\",\"keyField\":\"id\",\"keyValue\":\"12,13\",\"searchField\":[\"name\"]}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311809) [ RunTime:0.139008s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:10+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311810) [ RunTime:0.042003s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:16+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311816) [ RunTime:0.042002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:17+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311817) [ RunTime:0.042003s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:17+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311817) [ RunTime:0.040002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:17+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311817) [ RunTime:0.042002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:18+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311818) [ RunTime:0.034002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:21+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311821) [ RunTime:0.048002s ]
+---------------------------------------------------------------
+[ 2019-08-09T08:50:22+08:00 ] 0.0.0.0 POST localhost:88/admin/category/selectpage
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` WHERE  (  `name` LIKE '%%'  AND `type` = 'test' ) ORDER BY `name` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\",\"custom\":{\"type\":\"test\"}}' , '/admin/category/selectpage' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565311822) [ RunTime:0.038003s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:03:18+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208354
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:03:22+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:04:20+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:04:40+08:00 ] 0.0.0.0 POST localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_videotest` (`video_name` , `video_region` , `video_year` , `video_desc` , `video_type` , `weigh` , `createtime` , `updatetime`) VALUES ('进击的巨人2' , 'jp' , '2014' , 'wwwwwww' , 'rx,lz' , 1 , 1565312680 , 1565312680) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `weigh`=2  WHERE  `video_id` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('视频 添加' , '{\"dialog\":\"1\",\"row\":{\"video_name\":\"\\u8fdb\\u51fb\\u7684\\u5de8\\u4eba2\",\"video_region\":\"jp\",\"video_year\":\"2014\",\"video_desc\":\"wwwwwww\",\"video_type\":[\"rx\",\"lz\"],\"weigh\":\"1\"}}' , '/admin/videotest/add?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565312680) [ RunTime:0.029002s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:04:59+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208355
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:05:04+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:16:45+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208356
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:16:48+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:19:01+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208357
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:19:02+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22hobbydata%22%3A%22reading%22%7D&op=%7B%22hobbydata%22%3A%22FIND_IN_SET%22%7D&_=1565311208358
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE (  (  (  FIND_IN_SET('reading', `hobbydata`) ) ) ) AND `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:19:05+08:00 ] 0.0.0.0 GET localhost:88/admin/category/index?sort=weigh&order=desc&_=1565311202287
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:24:39+08:00 ] 0.0.0.0 GET localhost:88/admin/category?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.420024s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.246014s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:24:43+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.102006s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:27:13+08:00 ] 0.0.0.0 POST localhost:88/admin/index/login?url=%2Fadmin%2Findex%2Findex
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.009001s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1565314032,`token`='96ac9941-d357-4ca9-a653-97e064c72318',`updatetime`=1565314032  WHERE  `id` = 1 [ RunTime:0.076004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/index\\/index\",\"__token__\":\"06e801b2fc9d47a7267aa207727485e6\",\"username\":\"admin\",\"captcha\":\"vwbb\"}' , '/admin/index/login?url=%2Fadmin%2Findex%2Findex' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565314033) [ RunTime:0.036002s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:27:15+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:27:16+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:28:15+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:36:08+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:36:10+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:36:11+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T09:36:12+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:08:38+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:08:40+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:08:41+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:08:52+08:00 ] 0.0.0.0 GET localhost:88/admin/test?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'test' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:08:55+08:00 ] 0.0.0.0 GET localhost:88/admin/test/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565316533285
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_test` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_test` WHERE `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_test` WHERE `fa_test`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.009001s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:09:21+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:09:38+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:10:00+08:00 ] 0.0.0.0 POST localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_videotest` (`video_name` , `video_region` , `video_year` , `video_desc` , `video_type` , `weigh` , `createtime` , `updatetime`) VALUES ('进击的巨人2' , 'jp' , '2014' , 'ffffff' , 'rx,lz' , 2 , 1565316600 , 1565316600) [ RunTime:0.014001s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `weigh`=3  WHERE  `video_id` = 3 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('视频 添加' , '{\"dialog\":\"1\",\"row\":{\"video_name\":\"\\u8fdb\\u51fb\\u7684\\u5de8\\u4eba2\",\"video_region\":\"jp\",\"video_year\":\"2014\",\"video_desc\":\"ffffff\",\"video_type\":[\"rx\",\"lz\"],\"weigh\":\"2\"}}' , '/admin/videotest/add?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565316600) [ RunTime:0.078004s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:06+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:08+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:09+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:10+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:19+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:15:24+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:19:54+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:23:47+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565317194167
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.011000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:24:07+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22videotype%22%3A%22rx%22%7D&op=%7B%22videotype%22%3A%22FIND_IN_SET%22%7D&_=1565317194168
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:24:13+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22videotype%22%3A%22rx%22%7D&op=%7B%22videotype%22%3A%22FIND_IN_SET%22%7D&_=1565317194169
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:24:50+08:00 ] 0.0.0.0 POST localhost:88/admin/ajax/weigh
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `videoid`,`weigh` FROM `fa_videotest` WHERE  `videoid` IN (1,3,2) ORDER BY `weigh` DESC [ RunTime:0.019001s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `weigh`=3  WHERE  `videoid` = 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `weigh`=2  WHERE  `videoid` = 3 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `weigh`=1  WHERE  `videoid` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"ids\":\"1,3,2\",\"changeid\":\"1\",\"pid\":\"\",\"field\":\"weigh\",\"orderway\":\"desc\",\"table\":\"videotest\",\"pk\":\"videoid\"}' , '/admin/ajax/weigh' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565317490) [ RunTime:0.075005s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:24:52+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22videotype%22%3A%22rx%22%7D&op=%7B%22videotype%22%3A%22FIND_IN_SET%22%7D&_=1565317194170
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE (  (  (  FIND_IN_SET('rx', `videotype`) ) ) ) AND `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:25:04+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/edit/ids/3?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE (  `videoid` = 3 ) AND `fa_videotest`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:27:39+08:00 ] 0.0.0.0 GET localhost:88/admin/index/logout
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:27:44+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:12+08:00 ] 0.0.0.0 POST localhost:88/index/user/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'guts' LIMIT 1 [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `logintime`=1565317692,`updatetime`=1565317692  WHERE  `id` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('2843c97a6cd85d3aabcafeb60552fec634940033' , 2 , 1565317692 , 1567909692) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:15+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:16+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:21+08:00 ] 0.0.0.0 GET localhost:88/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:22+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:22+08:00 ] 0.0.0.0 GET localhost:88/index/user/changepwd.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:24+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:26+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:28:27+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:36:04+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:36:05+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:36:08+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:36:09+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:37:12+08:00 ] 0.0.0.0 GET localhost:88/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:37:18+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:37:20+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:12+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:13+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:17+08:00 ] 0.0.0.0 GET localhost:88/index/user/profile.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:19+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:19+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:47:21+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:00+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:02+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:03+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:09+08:00 ] 0.0.0.0 GET localhost:88/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:11+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:48:12+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:49:03+08:00 ] 0.0.0.0 POST localhost:88/admin/index/login?url=%2Fadmin%2Fvideotest%2Findex.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1565318943,`token`='0dfef787-57e0-455a-853a-e2486ad0ac59',`updatetime`=1565318943  WHERE  `id` = 1 [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/videotest\\/index.html\",\"__token__\":\"32d108f74e16efe6869724e7492d2f55\",\"username\":\"admin\",\"captcha\":\"7med\"}' , '/admin/index/login?url=%2Fadmin%2Fvideotest%2Findex.html' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565318943) [ RunTime:0.024001s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:49:04+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:49:07+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565318945686
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:49:32+08:00 ] 0.0.0.0 POST localhost:88/admin/videotest/del/ids/3
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE (  `videoid` IN (3) ) AND `fa_videotest`.`deletetime` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `fa_videotest`  SET `deletetime`=1565318972,`updatetime`=1565318972  WHERE  `videoid` = 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('视频 删除' , '{\"action\":\"del\",\"ids\":\"3\",\"params\":\"\"}' , '/admin/videotest/del/ids/3' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565318972) [ RunTime:0.038003s ]
+---------------------------------------------------------------
+[ 2019-08-09T10:49:34+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565318945687
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:11:32+08:00 ] 0.0.0.0 GET localhost:88/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:11:35+08:00 ] 0.0.0.0 GET localhost:88/api
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:13:45+08:00 ] 0.0.0.0 GET localhost:88/api/demo/test1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:14:10+08:00 ] 0.0.0.0 GET localhost:88/api/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:20:53+08:00 ] 0.0.0.0 GET localhost:88/api/user/login?account=guts&password=123456
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'guts' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `prevtime`=1565317692,`logintime`=1565320852,`updatetime`=1565320852  WHERE  `id` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('1b29d0b5b52598ac14be805ea6baa1965a68f1f4' , 2 , 1565320852 , 1567912852) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '1b29d0b5b52598ac14be805ea6baa1965a68f1f4' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T11:21:18+08:00 ] 0.0.0.0 GET localhost:88/api/user/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T15:30:03+08:00 ] 0.0.0.0 GET localhost:88/api/user/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T15:46:16+08:00 ] 0.0.0.0 GET localhost:88/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115006s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.187011s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T15:46:20+08:00 ] 0.0.0.0 GET localhost:88/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-09T15:46:21+08:00 ] 0.0.0.0 GET localhost:88/index/ajax/lang?callback=define&controllername=user&v=1.0.1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-09T16:31:30+08:00 ] 0.0.0.0 GET localhost:88/api/video/search
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.062003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]Array to string conversion
+---------------------------------------------------------------
+[ 2019-08-09T16:33:28+08:00 ] 127.0.0.1 POST localhost:88/api/video/search?keyword=%E8%BF%9B%E5%87%BB
+[ error ] [8]Array to string conversion
+---------------------------------------------------------------
+[ 2019-08-09T16:33:48+08:00 ] 127.0.0.1 POST localhost:88/api/video/search?keyword=%E8%BF%9B%E5%87%BB
+[ error ] [8]Array to string conversion
+---------------------------------------------------------------
+[ 2019-08-09T16:38:52+08:00 ] 0.0.0.0 GET localhost:88/api/video/search?keyword=jinji
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '2843c97a6cd85d3aabcafeb60552fec634940033' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]Array to string conversion

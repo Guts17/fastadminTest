@@ -1,0 +1,737 @@
+---------------------------------------------------------------
+[ 2019-08-13T09:33:41+08:00 ] 0.0.0.0 POST localhost:88/admin/index/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.072000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.017000s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1565660020,`token`='e2c09363-465d-4c54-94e6-e8047a7c0d08',`updatetime`=1565660020  WHERE  `id` = 1 [ RunTime:0.115000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"a7c5b5928ed511948d7cd2aef458d5cf\",\"username\":\"admin\",\"captcha\":\"wti3\"}' , '/admin/index/login.html' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565660021) [ RunTime:0.027000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:43+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.028000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:44+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:45+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:47+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:48+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:48+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:33:51+08:00 ] 0.0.0.0 GET localhost:88/admin/videotest/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565660029460
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videotest` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videotest` WHERE `fa_videotest`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:38:12+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.043005s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:38:13+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:38:14+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:06+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:08+08:00 ] 0.0.0.0 GET localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:09+08:00 ] 0.0.0.0 GET localhost:88/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:13+08:00 ] 0.0.0.0 GET localhost:88/admin/video?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'video' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:15+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565660414133
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:20+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22status%22%3A%22show%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565660414134
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:22+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22status%22%3A%22hidden%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565660414135
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:25+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565660414136
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:31+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565660414137
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:40:57+08:00 ] 0.0.0.0 GET localhost:88/admin/video/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:41:05+08:00 ] 0.0.0.0 GET localhost:88/admin/general/attachment/select?element_id=fachoose-video_image&multiple=false&mimetype=image/*&admin_id=&user_id=&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'general/attachment/select' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:41:08+08:00 ] 0.0.0.0 GET localhost:88/admin/general/attachment/select?sort=id&order=desc&offset=0&limit=10&filter=%7B%22mimetype%22%3A%22image%22%7D&op=%7B%22mimetype%22%3A%22LIKE+%25...%25%22%7D&_=1565660466292
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_attachment` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_attachment` WHERE  (  `mimetype` LIKE '%image%' ) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_attachment` WHERE  (  `mimetype` LIKE '%image%' ) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:41:54+08:00 ] 0.0.0.0 GET localhost:88/admin/video/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:47:01+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22status%22%3A%22hidden%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565660414138
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:48:16+08:00 ] 0.0.0.0 GET localhost:88/admin/video/edit/ids/4056?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010999s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016998s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  `video_id` = 4056 ) AND `fa_video`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.011999s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:48:51+08:00 ] 0.0.0.0 POST localhost:88/admin/video/edit/ids/4056?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012999s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  `video_id` = 4056 ) AND `fa_video`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] UPDATE `fa_video`  SET `status`='show',`updatetime`=1565660930  WHERE  `video_id` = 4056 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('视频 编辑' , '{\"dialog\":\"1\",\"row\":{\"video_name\":\"\\u67d0\\u50f5\\u5c38\\u5c11\\u5973\\u7684\\u707e\\u96be\",\"video_aliasname\":\"\\u67d0\\u50f5\\u5c38\\u5c11\\u5973\\u7684\\u707e\\u96be\",\"video_updateinfo\":\"\\u5168\\u96c6\",\"video_region\":[\"jp\"],\"video_type\":[\"gx\",\"nxx\",\"aq\"],\"video_years\":\"2018\",\"video_tag\":\"\\u65e5\\u8bed,tv\",\"video_index\":\"mdm\",\"video_desc\":\"\\u300a\\u67d0\\u50f5\\u5c38\\u5c11\\u5973\\u7684\\u707e\\u96be\\u300b\\u8bb2\\u8ff0\\u5728\\u5927\\u5b66\\u7684\\u5730\\u4e0b\\u8d44\\u6599\\u5ba4\\u4e2d\\uff0c\\u6c89\\u7761\\u7740\\u51fa\\u751f\\u4e8e\\u610f\\u5927\\u5229\\u7684\\u50f5\\u5c38\\u7f8e\\u5c11\\u5973\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u3002\\u800c\\u67d0\\u4e2a\\u6691\\u5047\\u91cc\\uff0c6\\u540d\\u5927\\u5b66\\u751f\\u5728\\u5927\\u5b66\\u5730\\u4e0b\\u8d44\\u6599\\u5ba4\\u4e2d\\uff0c\\u62ff\\u8d70\\u4e86\\u5c5e\\u4e8e\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u7684\\u79d8\\u77f3\\u3002\\u660e\\u660e\\u662f\\u7f8e\\u5c11\\u5973\\u5374\\u662f\\u4e2a\\u50f5\\u5c38\\uff0c\\u5728\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u521a\\u521a\\u82cf\\u9192\\u8fd8\\u662f\\u7761\\u773c\\u6726\\u80e7\\u7684\\u65f6\\u5019\\uff0c\\u552f\\u4e00\\u5bf9\\u5979\\u5fe0\\u5fc3\\u803f\\u803f\\u7684\\u5973\\u4ec6\\u963f\\u9c81\\u739b\\u8b66\\u544a\\u7740\\u5979\\uff0c\\u8ba9\\u5979\\u52a1\\u5fc5\\u6740\\u6389\\u5b66\\u751f\\u4eec\\u593a\\u56de\\u79d8\\u77f3\\uff0c\\u5426\\u5219\\u8eab\\u4f53\\u5c06\\u4f1a\\u5d29\\u574f\\u6b86\\u5c3d\\u3002\\u6ca1\\u6709\\u529e\\u6cd5\\u7684\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u53ea\\u597d\\u5f00\\u59cb\\u730e\\u6740\\u5b66\\u751f\\u4eec\\uff0c\\u53ef\\u662f\\u5728\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u9192\\u6765\\u4e4b\\u65f6\\uff0c\\u5df2\\u7ecf\\u662f\\u4eba\\u7c7b\\u7684\\u6587\\u660e\\u6781\\u5177\\u53d1\\u5c55\\u540e\\u7684100\\u5e74\\u4e4b\\u540e\\u4e86\\u3002\\u5728\\u6296S\\u7f8e\\u5c11\\u5973\\u4e2d\\u5b66\\u751f\\u771f\\u5b50\\u7684\\u6307\\u6325\\u4e0b\\uff0c\\u6709\\u7740\\u65b0\\u578b\\u6b66\\u5668\\u7684\\u5b66\\u751f\\u4eec\\u5f00\\u59cb\\u594b\\u8d77\\u53cd\\u6297\\uff0c\\u4e0d\\u987e\\u4e00\\u5207\\u7684\\u6b8b\\u9177\\u53cd\\u51fb\\u7ec8\\u4e8e\\u5f00\\u59cb\\u4e86\\u3002\\u5728\\u8c01\\u90fd\\u6ca1\\u6709\\u89c1\\u8fc7\\u7684\\u6740\\u622e\\u6e38\\u620f\\u7684\\u6700\\u540e\\uff0c\\u5230\\u5e95\\u662f\\u5b66\\u751f\\u4eec\\u7684\\u80dc\\u5229\\u8fd8\\u662f\\u4f18\\u8299\\u6d1b\\u5409\\u5974\\u7684\\u80dc\\u5229\\uff1f\",\"video_detailurl\":\"http:\\/\\/www.imomoe.io\\/view\\/4056.html\",\"video_episodeurl\":\"http:\\/\\/www.imomoe.io\\/playdata\\/216\\/4056.js?56579.61\",\"video_image\":\"http:\\/\\/pic.xiaomingming.org\\/FileUpload\\/2763.jpg\",\"video_switch\":\"1\",\"weigh\":\"1\",\"refreshtime\":\"2019-08-09 10:10:00\",\"status\":\"show\"},\"ids\":\"4056\"}' , '/admin/video/edit/ids/4056?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565660930) [ RunTime:0.050995s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:48:52+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22status%22%3A%22hidden%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565660414139
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000999s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:48:55+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%22status%22%3A%22show%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565660414140
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014999s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T09:55:33+08:00 ] 0.0.0.0 GET localhost:88/admin/video/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:12:33+08:00 ] 0.0.0.0 GET localhost:88/admin/video?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038004s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.045005s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'video' LIMIT 1 [ RunTime:0.013002s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:12:35+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1565665953937
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:12:57+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953938
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.018002s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:13:31+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22status%22%3A%22hidden%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565665953939
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.008001s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:13:36+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22status%22%3A%22show%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565665953940
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:13:39+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953941
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:13:55+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=jians&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953942
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:13:57+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=%E5%81%A5%E8%BA%AB&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953943
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.022003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.025002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:14:14+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=shaon&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953944
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.004001s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:14:15+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=%E5%B0%91%E5%A5%B3&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953945
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:14:21+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953946
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.010001s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:14:45+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%7D&op=%7B%22video_name%22%3A%22%3D%22%7D&_=1565665953947
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:18+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22video_name%22%3A%22%3D%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953948
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:29+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22video_name%22%3A%22%3D%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953949
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:37+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%2C%22status%22%3A%22show%22%7D&op=%7B%22video_name%22%3A%22%3D%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953950
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.031003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:39+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22video_name%22%3A%22%3D%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953951
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女'  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:41+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%7D&op=%7B%22video_name%22%3A%22%3D%22%7D&_=1565665953952
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:49+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953953
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:15:56+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=50&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953954
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 50,50 [ RunTime:0.011001s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:16:03+08:00 ] 0.0.0.0 GET localhost:88/admin/video/edit/ids/7478?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  `video_id` = 7478 ) AND `fa_video`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:20:48+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_name%22%3A%22%E5%B0%91%E5%A5%B3%22%7D&op=%7B%22video_name%22%3A%22%3D%22%7D&_=1565665953955
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_name` = '少女' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:21:13+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_id%22%3A%221615%22%7D&op=%7B%22video_id%22%3A%22%3D%22%7D&_=1565665953956
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `video_id` = 1615 ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `video_id` = 1615 ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:21:26+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953957
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T11:21:35+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=16&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953958
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:21:36+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=161&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953959
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.013001s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T11:21:37+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953960
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:46:13+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953961
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:46:26+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953962
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034004s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.127012s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.065006s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:46:34+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22kh%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953963
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:47:14+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22rx%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953964
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.025003s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:51:29+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22nxx%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953965
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T13:59:31+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=1615&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953966
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.034003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.028003s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+---------------------------------------------------------------
+[ 2019-08-13T14:00:28+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953967
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.045005s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.006000s ]
+---------------------------------------------------------------
+[ 2019-08-13T14:00:45+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%7D&op=%7B%7D&_=1565665953968
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.164016s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.133013s ]
+---------------------------------------------------------------
+[ 2019-08-13T14:00:53+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953969
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.061006s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.081008s ]
+---------------------------------------------------------------
+[ 2019-08-13T14:02:10+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953970
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.032003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.050005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.036003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T14:02:12+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953971
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.188018s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.089009s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.047004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.055006s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:15+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%7D&_=1565665953972
+[ sql ] [ DB ] CONNECT:[ UseTime:2.714272s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:1.890189s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.399040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.091009s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.059006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.103011s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.244025s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) ) ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.053005s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:29+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953973
+[ sql ] [ DB ] CONNECT:[ UseTime:0.072007s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.050005s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.022003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:32+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%2C%22status%22%3A%22show%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953974
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.035004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'show' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:35+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22video_type%22%3A%22msn%22%2C%22status%22%3A%22hidden%22%7D&op=%7B%22video_type%22%3A%22FIND_IN_SET%22%2C%22status%22%3A%22%3D%22%7D&_=1565665953975
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.023003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.021003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  (  FIND_IN_SET('msn', `video_type`) )  AND `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:48+08:00 ] 0.0.0.0 GET localhost:88/admin/video/index?addtabs=1&search=&sort=weigh&order=desc&offset=0&limit=50&filter=%7B%22status%22%3A%22hidden%22%7D&op=%7B%22status%22%3A%22%3D%22%7D&_=1565665953976
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.055005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  (  `status` = 'hidden' ) ) AND `fa_video`.`deletetime` IS NULL ORDER BY `weigh` DESC LIMIT 0,50 [ RunTime:0.008000s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:53:58+08:00 ] 0.0.0.0 GET localhost:88/admin/video/edit/ids/7707?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.036004s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video` WHERE (  `video_id` = 7707 ) AND `fa_video`.`deletetime` IS NULL LIMIT 1 [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:31+08:00 ] 0.0.0.0 GET localhost:88/admin/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014002s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.033003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.024003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.260026s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_config` [ RunTime:0.034003s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.028002s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:36+08:00 ] 0.0.0.0 GET localhost:88/admin/auth/rule?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.050005s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.024003s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` ORDER BY `weigh` DESC,`id` ASC [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'auth/rule' LIMIT 1 [ RunTime:0.053006s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:39+08:00 ] 0.0.0.0 GET localhost:88/admin/auth/rule/index?sort=weigh&order=desc&_=1565683237317
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` ORDER BY `weigh` DESC,`id` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:53+08:00 ] 0.0.0.0 POST localhost:88/admin/auth/rule/del/ids/85
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.042005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` ORDER BY `weigh` DESC,`id` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` IN (85,86,87,88,89,90,91,92,93) [ RunTime:0.589058s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.315032s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('权限管理 菜单规则 删除' , '{\"action\":\"del\",\"ids\":\"85\",\"params\":\"\"}' , '/admin/auth/rule/del/ids/85' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565683252) [ RunTime:0.174018s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:55+08:00 ] 0.0.0.0 POST localhost:88/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.038004s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.023003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.078007s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '0.0.0.0' , 1565683254) [ RunTime:0.056006s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:00:56+08:00 ] 0.0.0.0 GET localhost:88/admin/auth/rule/index?sort=weigh&order=desc&_=1565683237318
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.062007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.073007s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` ORDER BY `weigh` DESC,`id` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:01:05+08:00 ] 0.0.0.0 GET localhost:88/admin/auth/rule/edit/ids/103?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` ORDER BY `weigh` DESC,`id` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` = 103 LIMIT 1 [ RunTime:0.001000s ]

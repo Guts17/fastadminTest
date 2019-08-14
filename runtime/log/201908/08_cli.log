@@ -1,0 +1,37 @@
+[ 2019-08-08T16:25:42+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:25:42+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'videotest' [ RunTime:0.043002s ]
+[ 2019-08-08T16:25:42+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_videotest' [ RunTime:0.023002s ]
+[ 2019-08-08T16:25:42+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_videotest' ORDER BY ORDINAL_POSITION [ RunTime:0.001000s ]
+[ 2019-08-08T16:27:51+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:27:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'videotest' [ RunTime:0.001000s ]
+[ 2019-08-08T16:27:51+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_videotest' [ RunTime:0.023001s ]
+[ 2019-08-08T16:29:48+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:29:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'videotest' [ RunTime:0.036002s ]
+[ 2019-08-08T16:29:48+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_videotest' [ RunTime:0.045003s ]
+[ 2019-08-08T16:46:20+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:46:20+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'videotest' [ RunTime:0.027002s ]
+[ 2019-08-08T16:46:20+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_videotest' [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'videotest' [ RunTime:0.028001s ]
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_videotest' [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_videotest' ORDER BY ORDINAL_POSITION [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.028001s ]
+[ 2019-08-08T16:46:35+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'videotest' LIMIT 1 [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'videotest' , '视频' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1565253995 , 1565253995) [ RunTime:0.100005s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/index' LIMIT 1 [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/recyclebin' LIMIT 1 [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/add' LIMIT 1 [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/edit' LIMIT 1 [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/del' LIMIT 1 [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/destroy' LIMIT 1 [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/restore' LIMIT 1 [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'videotest/multi' LIMIT 1 [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.058003s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/recyclebin' , 'fa fa-circle-o' , '回收站' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.000000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.015001s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/destroy' , 'fa fa-circle-o' , '真实删除' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.001000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/restore' , 'fa fa-circle-o' , '还原' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.004000s ]
+[ 2019-08-08T16:46:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 85 , 'videotest/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1565253996 , 1565253996) [ RunTime:0.000000s ]
